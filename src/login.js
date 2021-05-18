@@ -1,11 +1,3 @@
-//
-//
-// Disciplina: Trabalho Interdisciplinar - Aplicações Web
-// Professor: Rommel Vieira Carneiro (rommelcarneiro@gmail.com)
-//
-// Código LoginApp utilizado como exemplo para alunos de primeiro período 
-
-
 // Página inicial de Login
 const LOGIN_URL = "login.html";
 
@@ -39,6 +31,7 @@ const dadosIniciais = {
     usuarios: [
         { "id": generateUUID (), "login": "admin", "senha": "123", "nome": "Administrador do Sistema", "email": "admin@abc.com"},
         { "id": generateUUID (), "login": "user", "senha": "123", "nome": "Usuario Comum", "email": "user@abc.com"},
+        
     ]
 };
 
@@ -93,6 +86,7 @@ function loginUser (login, senha) {
             // Salva os dados do usuário corrente no Session Storage, mas antes converte para string
             sessionStorage.setItem ('usuarioCorrente', JSON.stringify (usuarioCorrente));
 
+            alert('Usuário logado com sucesso!');
             // Retorna true para usuário encontrado
             return true;
         }

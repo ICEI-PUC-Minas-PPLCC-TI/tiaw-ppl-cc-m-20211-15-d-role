@@ -133,10 +133,10 @@
             // Valida login e se estiver ok, redireciona para tela inicial da aplicação
             resultadoLogin = loginUser(username, password);
             if (resultadoLogin) {
-                window.location.href = 'index.html';
+                alert('Usuário logado com sucesso.')
             }
             else { // Se login falhou, avisa ao usuário
-                alert('Usuário ou senha incorretos');
+                alert('Usuário ou senha incorretos.');
             }
         }
 
@@ -157,7 +157,7 @@
 
             // Adiciona o usuário no banco de dados
             addUser(nome, login, senha, email);
-            alert('Usuário salvo com sucesso. Proceda com o login para ');
+            alert('Usuário salvo com sucesso. Proceda com o login.');
 
             // Oculta a div modal do login
             //document.getElementById ('loginModal').style.display = 'none';
