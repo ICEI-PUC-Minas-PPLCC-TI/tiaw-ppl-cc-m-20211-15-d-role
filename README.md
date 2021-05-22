@@ -18,6 +18,7 @@ Este _template_ adota a seguinte estrutura de diretórios:
   - `scripts`
   - `styles`
   - `vendor`
+- `Imagens`
 
 > O grupo é livre para alterar a estrutura proposta. No entanto, nesse
 > caso, o arquivo `README.md` deve ser devidamente modificado para
@@ -52,6 +53,10 @@ JavaScript:
 - O diretório `styles` é utilizado para os arquivos CSS
 - o diretório `vendor` é reservado para incluir bibliotecas e frameworks
   utilizados no projeto como Bootstrap, jQuery, etc.
+  
+## Imagens
+
+Este diretório armazena todas as imagens utilizadas para o desenvolvimento do WebSite.
 
 # Orientações Gerais Sobre o Projeto
 
