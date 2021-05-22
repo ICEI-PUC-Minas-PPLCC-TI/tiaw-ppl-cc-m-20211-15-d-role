@@ -11,6 +11,7 @@
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
    <!-- Bootstrap -->
+   <script src="scripts/editar.js"></script>
    <title>D'Rolé - Perfil</title>
 </head>
 
@@ -59,13 +60,15 @@
 
                <div class="px-4 pt-0 pb-4 cover">
                   <div class="media align-items-end profile-head">
-                     <div class="profile mr-3"><img
-                           src="https://scontent.fplu9-1.fna.fbcdn.net/v/t1.6435-9/56398236_2188172101273576_1099129547485347840_n.png?_nc_cat=103&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=MDAJbfqdiHMAX_RbFpV&_nc_ht=scontent.fplu9-1.fna&oh=3f128712e1611a61761bf57e441d8269&oe=60D05E2F"
-                           alt="..." width="130" class="rounded mb-2 img-thumbnail"><a href="editarperfil.html"
-                           class="btn btn-outline-dark btn-sm btn-block">Editar Perfil</a></div>
+                     <div class="profile mr-3">
+                        <img src="https://www.conteudojuridico.com.br/images/unknown-male.jpg" alt="..." width="130"
+                           class="rounded mb-2 img-thumbnail">
+                        <a href="editarperfil.html" class="btn btn-outline-dark btn-sm btn-block editaPerfil"
+                           data-toggle="modal" data-target="#mudarModal">Editar Perfil</a>
+                     </div>
                      <div class="media-body mb-5 text-white">
-                        <h4 class="mt-0 mb-0">Gilboa</h4>
-                        <p class="small mb-4 tipo">Estabelecimento</p>
+                        <h4 id="mudaNome" class="mt-0 mb-0">Nome</h4>
+                        <p id= "mudaTipo" class="small mb-4 tipo">Tipo</p>
                      </div>
                   </div>
                </div> <!-- End foto, nome, tipo -->
@@ -73,7 +76,7 @@
                <div class="bg-light p-4 d-flex justify-content-end text-center">
                   <ul class="list-inline mb-0">
                      <li class="list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">80%</h5><small class="text-muted"><i
+                        <h5 class="font-weight-bold mb-0 d-block">0%</h5><small class="text-muted"><i
                               class="fas fa-user mr-1"></i>Avaliação</small>
                      </li>
                   </ul>
@@ -82,65 +85,53 @@
                <div class="px-4 py-3">
                   <h5 class="mb-0">Sobre</h5>
                   <div class="p-4 rounded shadow-sm bg-light">
-                     <p>Desde 380 milhões AC. O melhor bar em toda história de BH</p> <!-- Sobre -->
+                     <p id="mudaSobre">Escreva um sobre.</p> <!-- Sobre -->
                   </div>
                </div> <!-- End sobre -->
 
-               <div class="py-4 px-4"><hr></div>
+               <div class="py-4 px-4">
+                  <hr>
+               </div>
 
                <div class="py-4 px-4">
                   <div class="d-flex align-items-center justify-content-between mb-3">
-                     <h5 class="mb-0">Fotos</h5><a href="#" class="btn btn-link text-muted">Carregar mais</a>
+                     <h5 class="mb-0">Fotos</h5>
+                     <a href="#" class="btn btn-link text-muted">Carregar mais</a>
                      <!-- Carregar mais fotos -->
                   </div>
                   <div class="row">
                      <div class="col-lg-6 mb-2 pr-lg-1"><img
-                           src="https://fosforocenografia.com.br/wp-content/uploads/2017/04/gilboa_05.jpg" alt=""
-                           class="img-fluid rounded shadow-sm"></div>
+                           src="https://lh3.googleusercontent.com/proxy/KcvBsq1tjruX6qqn905FZIZa211XzU_LlgYG5_NRwVPoKGBCpyIAnMbLQQCjpvjmcmiD4cvk_OuXr5WL4DegLshth7fQ01dXxAh2bI91jjyLmbHX5H_NVBWR2gBbttuz52aZwhO-bYbLA51p9RAQO6Gf2Zxxr66tz_-A5gHhG03v9Ce68R7A"
+                           alt="" class="img-fluid rounded shadow-sm"></div>
                      <div class="col-lg-6 mb-2 pl-lg-1"><img
-                           src="https://fosforocenografia.com.br/wp-content/uploads/2017/04/gilboa_00.jpg" alt=""
-                           class="img-fluid rounded shadow-sm"></div>
+                           src="https://lh3.googleusercontent.com/proxy/KcvBsq1tjruX6qqn905FZIZa211XzU_LlgYG5_NRwVPoKGBCpyIAnMbLQQCjpvjmcmiD4cvk_OuXr5WL4DegLshth7fQ01dXxAh2bI91jjyLmbHX5H_NVBWR2gBbttuz52aZwhO-bYbLA51p9RAQO6Gf2Zxxr66tz_-A5gHhG03v9Ce68R7A"
+                           alt="" class="img-fluid rounded shadow-sm"></div>
                      <div class="col-lg-6 pr-lg-1 mb-2"><img
-                           src="http://www.agendabh.com.br/wp-content/uploads/2019/02/gilboa_03.jpg" alt=""
-                           class="img-fluid rounded shadow-sm"></div>
+                           src="https://lh3.googleusercontent.com/proxy/KcvBsq1tjruX6qqn905FZIZa211XzU_LlgYG5_NRwVPoKGBCpyIAnMbLQQCjpvjmcmiD4cvk_OuXr5WL4DegLshth7fQ01dXxAh2bI91jjyLmbHX5H_NVBWR2gBbttuz52aZwhO-bYbLA51p9RAQO6Gf2Zxxr66tz_-A5gHhG03v9Ce68R7A"
+                           alt="" class="img-fluid rounded shadow-sm"></div>
                      <div class="col-lg-6 pl-lg-1"><img
-                           src="https://fosforocenografia.com.br/wp-content/uploads/2017/04/gilboa_04.jpg" alt=""
-                           class="img-fluid rounded shadow-sm"></div>
+                           src="https://lh3.googleusercontent.com/proxy/KcvBsq1tjruX6qqn905FZIZa211XzU_LlgYG5_NRwVPoKGBCpyIAnMbLQQCjpvjmcmiD4cvk_OuXr5WL4DegLshth7fQ01dXxAh2bI91jjyLmbHX5H_NVBWR2gBbttuz52aZwhO-bYbLA51p9RAQO6Gf2Zxxr66tz_-A5gHhG03v9Ce68R7A"
+                           alt="" class="img-fluid rounded shadow-sm"></div>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                     <a href="#" class="btn btn-outline-dark btn-sm btn-block">Adicionar fotos</a>
                   </div>
                </div> <!-- End fotos -->
 
-               <div class="py-4 px-4"><hr></div>
+               <div class="py-4 px-4">
+                  <hr>
+               </div>
 
                <div class="py-4 px-4">
                   <div class="d-flex align-items-center justify-content-between mb-3">
                      <h5 class="mb-0">Localização</h5>
                   </div>
-                  <div class="mapouter">
-                     <div class="gmap_canvas"><iframe width="700" height="400" id="gmap_canvas"
-                           src="https://maps.google.com/maps?q=Rua%20Pium-%C3%8D,%20772%20-%20Carmo,%20Belo%20Horizonte%20-%20MG,%2030310-08&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                           frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
-                           href="https://123movies-to.org"></a><br>
-                        <style>
-                           .mapouter {
-                              position: relative;
-                              text-align: right;
-                              height: 400px;
-                              width: 100%;
-                           }
-                        </style><a href="https://www.embedgooglemap.net">google map iframe code</a>
-                        <style>
-                           .gmap_canvas {
-                              overflow: hidden;
-                              background: none !important;
-                              height: 400px;
-                              width: 100%;
-                           }
-                        </style>
-                     </div>
-                  </div>
+                  <p id="mudaLocal">Sem localização no momento.</p>
                </div> <!-- End localização -->
 
-               <div class="py-4 px-4"><hr></div>
+               <div class="py-4 px-4">
+                  <hr>
+               </div>
 
                <div class="py-4 px-4">
                   <div class="d-flex align-items-center justify-content-between mb-3">
@@ -157,6 +148,70 @@
       </div>
    </div> <!-- End div container -->
    <!-- Fim Perfil -->
+
+   <!-- Modal -->
+   <div class="modal fade" id="mudarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="mudarModalLabel">Editar Perfil</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+               <form method="post" id="insert_form">
+                  <!-- Inicio body -->
+                  <div class="custom-file">
+                     <input type="file" class="custom-file-input" id="customFileLang" lang="pt_br">
+                     <label class="custom-file-label arquivo" for="customFileLang">Selecione a foto de perfil</label>
+                  </div> <!-- Selecionar foto do perfil -->
+
+                  <p></p> <!-- Pular linha no form-->
+
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tipo de perfil</label>
+                  <select class="custom-select my-1 mr-sm-2" id="tipo">
+                     <option value="1">Estabelecimento</option>
+                     <option value="2">Músico</option>
+                  </select>
+
+                  <p></p> <!-- Pular linha no form-->
+
+                  <div class="form-group row">
+                     <label for="nomeEditavel" class="col-sm-2 col-form-label">Nome</label>
+                     <div class="col-sm-10">
+                        <input name="NAME" type="text" class="form-control" id="NAME"
+                           placeholder="Nome estabelecimento ou músico">
+                     </div>
+                  </div>
+
+                  <div class="form-group row">
+                     <label for="sobreEditavel" class="col-sm-2 col-form-label">Sobre</label>
+                     <div class="col-sm-10">
+                        <input name="sobre" type="text" class="form-control" id="sobre" placeholder="Sobre você(s).">
+                     </div>
+                  </div>
+
+                  <div class="form-group row">
+                     <label for="localizacaoEditavel" class="col-sm-2 col-form-label">Localização</label>
+                     <div class="col-sm-10">
+                        <input name="local" type="text" class="form-control" id="local"
+                           placeholder="Escreva a sua localização.">
+                     </div>
+                  </div>
+
+                  <div class="form-group row">
+                     <div class="col-sm-10">
+                        <input type="button" name="salvaralt" id="salvaalt" value="Salvar"
+                           class="btn btn-outline-success" onclick="alteraPerfil()">
+                     </div>
+                  </div>
+
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- End modal -->
 
    <!-- Optional JavaScript -->
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
