@@ -32,3 +32,7 @@ function salvarDados() {
      */
 
 }
+
+function alertaAdicionarFoto() {
+    alert("Funcionalidade indisponível no momento.")
+}
