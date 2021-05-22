@@ -1,0 +1,13 @@
+.containerPerfil {
+    margin:30px;
+    margin-top: 0;
+}
+.profile-head {
+    transform: translateY(5rem)
+}
+
+.cover {
+    background-image: url(https://bhaz.com.br/wp-content/uploads/2018/07/669b941a-70ed-44f0-8559-3373915655c5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat
+}
