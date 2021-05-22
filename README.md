@@ -53,6 +53,10 @@ JavaScript:
 - O diretório `styles` é utilizado para os arquivos CSS
 - o diretório `vendor` é reservado para incluir bibliotecas e frameworks
   utilizados no projeto como Bootstrap, jQuery, etc.
+  
+## Imagens
+
+Este diretório armazena todas as imagens utilizadas para o desenvolvimento do WebSite.
 
 # Orientações Gerais Sobre o Projeto
 
