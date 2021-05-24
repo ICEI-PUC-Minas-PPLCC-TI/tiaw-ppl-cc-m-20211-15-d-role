@@ -31,7 +31,6 @@ const dadosIniciais = {
     usuarios: [
         { "id": generateUUID (), "login": "admin", "senha": "123", "nome": "Administrador do Sistema", "email": "admin@abc.com"},
         { "id": generateUUID (), "login": "user", "senha": "123", "nome": "Usuario Comum", "email": "user@abc.com"},
-        
     ]
 };
 
@@ -100,7 +99,7 @@ function loginUser (login, senha) {
 function logoutUser () {
     usuarioCorrente = {};
     sessionStorage.setItem ('usuarioCorrente', JSON.stringify (usuarioCorrente));
-    window.location = LOGIN_URL;
+    window.location = "login.html";
 }
 
 function addUser (nome, login, senha, email) {
