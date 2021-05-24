@@ -66,13 +66,14 @@
                <div class="px-4 pt-0 pb-4 cover">
                   <div class="media align-items-end profile-head">
                      <div class="profile mr-3">
-                        <img src="https://www.conteudojuridico.com.br/images/unknown-male.jpg" alt="..." width="130"
-                           class="rounded mb-2 img-thumbnail">
+                        <img id="imgPreview" src="https://picsum.photos/id/1005/80/80" alt="..."
+                           width="130" class="rounded mb-2 img-thumbnail">
                         <a href="editarperfil.html" class="btn btn-outline-dark btn-sm btn-block editaPerfil"
                            data-toggle="modal" data-target="#mudarModal">Editar Perfil</a>
                      </div>
                      <div id="mudaNomeTipo" class="media-body mb-5 text-white">
-                        <!-- AQUI NOME E TIPO -->
+                        <h4 id="mudaNome" class="mt-0 mb-0">Nome</h4>
+                        <p id="mudaTipo" class="small mb-4 tipo">Tipo</p>
                      </div>
                   </div>
                </div> <!-- End foto, nome, tipo -->
@@ -86,9 +87,14 @@
                   </ul>
                </div> <!-- End porcentagem de avaliação -->
 
-               <div id="mudaSobre" class="px-4 py-3">
+               <div id="abouti" class="px-4 py-3">
                   <h5 class="mb-0">Sobre</h5>
-                  <!-- AQUI SOBRE -->
+               </div> <!-- End sobre -->
+
+               <div class="px-4 py-3">
+                  <div class="p-4 rounded shadow-sm bg-light">
+                     <p id="mudaSobre">Escreva sobre você(s).</p>
+                  </div>
                </div> <!-- End sobre -->
 
                <div class="py-4 px-4">
@@ -98,21 +104,21 @@
                <div class="py-4 px-4">
                   <div class="d-flex align-items-center justify-content-between mb-3">
                      <h5 class="mb-0">Fotos</h5>
-                     <a href="#" class="btn btn-link text-muted">Carregar mais</a>
+                     <a id="carregarMais"" class="btn btn-link text-muted" onclick="alertaCarregarFoto()">Carregar mais</a>
                      <!-- Carregar mais fotos -->
                   </div>
-                  <div class="row">
+                  <div id="temAsFotos" class="row">
                      <div class="col-lg-6 mb-2 pr-lg-1"><img
-                           src="https://lh3.googleusercontent.com/proxy/KcvBsq1tjruX6qqn905FZIZa211XzU_LlgYG5_NRwVPoKGBCpyIAnMbLQQCjpvjmcmiD4cvk_OuXr5WL4DegLshth7fQ01dXxAh2bI91jjyLmbHX5H_NVBWR2gBbttuz52aZwhO-bYbLA51p9RAQO6Gf2Zxxr66tz_-A5gHhG03v9Ce68R7A"
+                           src="https://picsum.photos/700/300"
                            alt="" class="img-fluid rounded shadow-sm"></div>
                      <div class="col-lg-6 mb-2 pl-lg-1"><img
-                           src="https://lh3.googleusercontent.com/proxy/KcvBsq1tjruX6qqn905FZIZa211XzU_LlgYG5_NRwVPoKGBCpyIAnMbLQQCjpvjmcmiD4cvk_OuXr5WL4DegLshth7fQ01dXxAh2bI91jjyLmbHX5H_NVBWR2gBbttuz52aZwhO-bYbLA51p9RAQO6Gf2Zxxr66tz_-A5gHhG03v9Ce68R7A"
+                           src="https://picsum.photos/700/301"
                            alt="" class="img-fluid rounded shadow-sm"></div>
                      <div class="col-lg-6 pr-lg-1 mb-2"><img
-                           src="https://lh3.googleusercontent.com/proxy/KcvBsq1tjruX6qqn905FZIZa211XzU_LlgYG5_NRwVPoKGBCpyIAnMbLQQCjpvjmcmiD4cvk_OuXr5WL4DegLshth7fQ01dXxAh2bI91jjyLmbHX5H_NVBWR2gBbttuz52aZwhO-bYbLA51p9RAQO6Gf2Zxxr66tz_-A5gHhG03v9Ce68R7A"
+                           src="https://picsum.photos/700/302"
                            alt="" class="img-fluid rounded shadow-sm"></div>
                      <div class="col-lg-6 pl-lg-1"><img
-                           src="https://lh3.googleusercontent.com/proxy/KcvBsq1tjruX6qqn905FZIZa211XzU_LlgYG5_NRwVPoKGBCpyIAnMbLQQCjpvjmcmiD4cvk_OuXr5WL4DegLshth7fQ01dXxAh2bI91jjyLmbHX5H_NVBWR2gBbttuz52aZwhO-bYbLA51p9RAQO6Gf2Zxxr66tz_-A5gHhG03v9Ce68R7A"
+                           src="https://picsum.photos/700/303"
                            alt="" class="img-fluid rounded shadow-sm"></div>
                   </div>
                   <div class="d-flex align-items-center justify-content-between mb-3">
@@ -130,7 +136,7 @@
                </div>
 
                <div id="mudaLocal" class="px-4 py-3">
-                  <!-- AQUI SOBRE -->
+                  <p id="mudaLocal">Digite sua localização</p>
                </div> <!-- End sobre -->
 
                <div class="py-4 px-4">
@@ -166,7 +172,7 @@
                <form method="post" id="insert_form">
                   <!-- Inicio body -->
                   <div class="custom-file">
-                     <input type="file" class="custom-file-input" onclick="alertaAdicionarFoto()"">
+                     <input id="minhafoto" type="file" class="custom-file-input">
                      <label class=" custom-file-label arquivo" for="customFileLang">Selecione a foto de perfil</label>
                   </div> <!-- Selecionar foto do perfil -->
 
@@ -177,6 +183,7 @@
                      <option value="Estabelecimento">Estabelecimento</option>
                      <option value="Músico">Músico</option>
                      <option value="Frequentador de eventos">Frequentador de eventos</option>
+                     <option value="Banda">Banda</option>
                   </select>
 
                   <p></p> <!-- Pular linha no form-->
@@ -221,7 +228,7 @@
 
    <!-- Script modal -->
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-   <script src="scripts/editar.js"></script>
+   <script src="scripts/editarperfil.js"></script>
 
    <!-- End Script modal -->
 
