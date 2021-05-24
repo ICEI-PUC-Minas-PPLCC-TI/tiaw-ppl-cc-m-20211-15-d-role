@@ -15,8 +15,6 @@ Os membros do grupo são:
 - Laura Xavier
 - Tadeu Ochoa Azevedo Cruz
 
-> Inclua a lista dos membros da equipe com seus nomes completos.
-
 # Estrutura do Documento
 
 1. [Contexto](1-Contexto.md)
