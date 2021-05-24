@@ -14,7 +14,6 @@ Este _template_ adota a seguinte estrutura de diretórios:
 - `docs`
   - `images`
 - `src`
-  - `assets`
   - `scripts`
   - `styles`
   - `vendor`
