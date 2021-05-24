@@ -12,6 +12,12 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
    <!-- Bootstrap -->
    <title>D'Rolé - Perfil</title>
+   <script src="scripts/login.js"></script>
+   <script>
+      if (!usuarioCorrente.login) {
+         window.location = "login.html";
+      } // Usuário não tem acesso caso esteja deslogado
+   </script>
 </head>
 
 <body>
@@ -40,7 +46,7 @@
                      <a class="nav-link" href="#">Calendário</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="#">Entrar</a>
+                     <a class="nav-link" href="profiledono.html">Perfil</a>
                   </li>
 
                </ul>
@@ -86,7 +92,9 @@
                   </div>
                </div> <!-- End sobre -->
 
-               <div class="py-4 px-4"><hr></div>
+               <div class="py-4 px-4">
+                  <hr>
+               </div>
 
                <div class="py-4 px-4">
                   <div class="d-flex align-items-center justify-content-between mb-3">
@@ -109,7 +117,9 @@
                   </div>
                </div> <!-- End fotos -->
 
-               <div class="py-4 px-4"><hr></div>
+               <div class="py-4 px-4">
+                  <hr>
+               </div>
 
                <div class="py-4 px-4">
                   <div class="d-flex align-items-center justify-content-between mb-3">
@@ -140,7 +150,9 @@
                   </div>
                </div> <!-- End localização -->
 
-               <div class="py-4 px-4"><hr></div>
+               <div class="py-4 px-4">
+                  <hr>
+               </div>
 
                <div class="py-4 px-4">
                   <div class="d-flex align-items-center justify-content-between mb-3">
