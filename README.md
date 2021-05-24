@@ -46,8 +46,6 @@ Este diretório armazena o código fonte do projeto e adota uma hierarquia
 básica de projetos Web simples, que utilizam as tecnologias HTML, CSS e
 JavaScript:
 
-- O diretório `assets` é utilizado para armazenar imagens, fontes e
-  outros recursos utilizados no projeto. 
 - O diretório `scripts` armazena os arquivos JavaScripts do projeto
 - O diretório `styles` é utilizado para os arquivos CSS
 - o diretório `vendor` é reservado para incluir bibliotecas e frameworks
@@ -55,7 +53,7 @@ JavaScript:
   
 ## Imagens
 
-Este diretório armazena todas as imagens utilizadas para o desenvolvimento do WebSite.
+Este diretório é utilizado para armazenar imagens, fontes e outros recursos utilizados no projeto. 
 
 # Orientações Gerais Sobre o Projeto
 
