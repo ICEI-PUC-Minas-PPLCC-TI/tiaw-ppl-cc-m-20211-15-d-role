@@ -11,7 +11,6 @@
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
    <!-- Bootstrap -->
-   <script src="scripts/editar.js"></script>
    <title>D'Rolé - Perfil</title>
 </head>
 
@@ -66,9 +65,8 @@
                         <a href="editarperfil.html" class="btn btn-outline-dark btn-sm btn-block editaPerfil"
                            data-toggle="modal" data-target="#mudarModal">Editar Perfil</a>
                      </div>
-                     <div class="media-body mb-5 text-white">
-                        <h4 id="mudaNome" class="mt-0 mb-0">Nome</h4>
-                        <p id= "mudaTipo" class="small mb-4 tipo">Tipo</p>
+                     <div id="mudaNomeTipo" class="media-body mb-5 text-white">
+                        <!-- AQUI NOME E TIPO -->
                      </div>
                   </div>
                </div> <!-- End foto, nome, tipo -->
@@ -82,11 +80,9 @@
                   </ul>
                </div> <!-- End porcentagem de avaliação -->
 
-               <div class="px-4 py-3">
+               <div id="mudaSobre" class="px-4 py-3">
                   <h5 class="mb-0">Sobre</h5>
-                  <div class="p-4 rounded shadow-sm bg-light">
-                     <p id="mudaSobre">Escreva um sobre.</p> <!-- Sobre -->
-                  </div>
+                  <!-- AQUI SOBRE -->
                </div> <!-- End sobre -->
 
                <div class="py-4 px-4">
@@ -114,7 +110,8 @@
                            alt="" class="img-fluid rounded shadow-sm"></div>
                   </div>
                   <div class="d-flex align-items-center justify-content-between mb-3">
-                     <a id="adicionarFotos" class="btn btn-outline-dark btn-sm btn-block" onclick="alertaAdicionarFoto()">Adicionar fotos</a>
+                     <a id="adicionarFotos" class="btn btn-outline-dark btn-sm btn-block"
+                        onclick="alertaAdicionarFoto()">Adicionar fotos</a>
                   </div>
                </div> <!-- End fotos -->
 
@@ -122,11 +119,11 @@
                   <hr>
                </div>
 
-               <div class="py-4 px-4">
+               <div id="mudaLocal" class="py-4 px-4">
                   <div class="d-flex align-items-center justify-content-between mb-3">
                      <h5 class="mb-0">Localização</h5>
                   </div>
-                  <p id="mudaLocal">Sem localização no momento.</p>
+                  <!-- AQUI LOCAL -->
                </div> <!-- End localização -->
 
                <div class="py-4 px-4">
@@ -162,16 +159,16 @@
                <form method="post" id="insert_form">
                   <!-- Inicio body -->
                   <div class="custom-file">
-                     <input type="file" class="custom-file-input" id="customFileLang" lang="pt_br">
-                     <label class="custom-file-label arquivo" for="customFileLang">Selecione a foto de perfil</label>
+                     <input type="file" class="custom-file-input" onclick="alertaAdicionarFoto()"">
+                     <label class=" custom-file-label arquivo" for="customFileLang">Selecione a foto de perfil</label>
                   </div> <!-- Selecionar foto do perfil -->
 
                   <p></p> <!-- Pular linha no form-->
 
                   <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tipo de perfil</label>
                   <select class="custom-select my-1 mr-sm-2" id="tipo">
-                     <option value="1">Estabelecimento</option>
-                     <option value="2">Músico</option>
+                     <option value="Estabelecimento">Estabelecimento</option>
+                     <option value="Músico">Músico</option>
                   </select>
 
                   <p></p> <!-- Pular linha no form-->
@@ -185,6 +182,7 @@
                   </div>
 
                   <div class="form-group row">
+                     <span id="msg"></span> <!-- Alerta para dados alterados -->
                      <label for="sobreEditavel" class="col-sm-2 col-form-label">Sobre</label>
                      <div class="col-sm-10">
                         <input name="sobre" type="text" class="form-control" id="sobre" placeholder="Sobre você(s).">
@@ -192,7 +190,7 @@
                   </div>
 
                   <div class="form-group row">
-                     <label for="localizacaoEditavel" class="col-sm-2 col-form-label">Localização</label>
+                     <label for="localizacaoEditavel" class="col-sm-2 col-form-label">Local</label>
                      <div class="col-sm-10">
                         <input name="local" type="text" class="form-control" id="local"
                            placeholder="Escreva a sua localização.">
@@ -212,6 +210,12 @@
       </div>
    </div>
    <!-- End modal -->
+
+   <!-- Script modal -->
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <script src="scripts/editar.js"></script>
+
+   <!-- End Script modal -->
 
    <!-- Optional JavaScript -->
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
