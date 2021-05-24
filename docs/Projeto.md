@@ -1,17 +1,19 @@
 # Informações do Projeto
-`TÍTULO DO PROJETO`  
+`D'Rolé`  
 
 Trabalho Interdisciplinar - Aplicacões Web
 
-`CURSO`
+`Ciências da Computação`
 
-`SEMESTRE`
+`Primeiro Semestre`
 
 ## Participantes
 
 Os membros do grupo são: 
-- Fulano da Silva
-- Ciclano Albuquerque
+- Bruno Rodrigues Faria
+- Guilherme Lanza Japolino
+- Laura Xavier
+- Tadeu Ochoa Azevedo Cruz
 
 > Inclua a lista dos membros da equipe com seus nomes completos.
 
