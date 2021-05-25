@@ -10,6 +10,10 @@ function alertaCarregarFoto() {
   );
 }
 
+function fecharForm() {
+  window.location = "profiledono.html";
+}
+
 /* SALVAR DADOS MODIFICADOS PELO USUÁRIO NO LOCAL STORAGE E TRANSMITIR PARA A PÁGINA */
 if (localStorage.nomePerfil) {
   document.getElementById("mudaNome").innerHTML = localStorage.nomePerfil;
@@ -25,20 +29,24 @@ if (localStorage.localPerfil) {
 } // Se o localStorage conter localPerfil irá mostrar o local modificado do perfil
 
 var salvarData = function (event) {
-  event.preventDefault(); // Previnir o evento padrão
+  event.preventDefault();                                                               // Previnir o evento padrão
 
-  var Nome = document.getElementById("NAME").value; // Pegar o valor adquirido na variável NAME
-  var Tipo = document.getElementById("tipo").value; // Pegar o valor adquirido na variável tipo
-  var Sobre = document.getElementById("sobre").value; // Pegar o valor adquirido na variável sobre
-  var Local = document.getElementById("local").value; // Pegar o valor adquirido na variável local
+  var Nome = document.getElementById("NAME").value;                                     // Pegar o valor adquirido na variável NAME
+  var Tipo = document.getElementById("tipo").value;                                     // Pegar o valor adquirido na variável tipo
+  var Sobre = document.getElementById("sobre").value;                                   // Pegar o valor adquirido na variável sobre
+  var Local = document.getElementById("local").value;                                   // Pegar o valor adquirido na variável local
 
-  localStorage.setItem("nomePerfil", Nome); // Guardar no localStorage o valor da variavel Nome com a key nomePerfil
-  localStorage.setItem("tipoPerfil", Tipo); // Guardar no localStorage o valor da variavel Tipo com a key tipoPerfil
-  localStorage.setItem("sobrePerfil", Sobre); // Guardar no localStorage o valor da variavel Sobre com a key sobrePerfil
-  localStorage.setItem("localPerfil", Local); // Guardar no localStorage o valor da variavel Local com a key localPerfil
+  if(Nome == "" || Tipo == "" || Sobre == "" || Local == "") {
+    alert("Você deve preencher todos os campo fora a foto de perfil para continuar.");  // Se nenhum algum campo não for preenchido ele não irá salvar os dados do formulário.
+  } else {
+    localStorage.setItem("nomePerfil", Nome);                                           // Guardar no localStorage o valor da variavel Nome com a key nomePerfil
+    localStorage.setItem("tipoPerfil", Tipo);                                           // Guardar no localStorage o valor da variavel Tipo com a key tipoPerfil
+    localStorage.setItem("sobrePerfil", Sobre);                                         // Guardar no localStorage o valor da variavel Sobre com a key sobrePerfil
+    localStorage.setItem("localPerfil", Local);                                         // Guardar no localStorage o valor da variavel Local com a key localPerfil
 
-  alert("Dados salvos com sucesso."); // Mandar um alerta quando os dados forem salvos
-  window.location = "profiledono.html"; // Levar o usuário para sua página de perfil com as modificações feitas
+    alert("Dados salvos com sucesso.");                                                 // Mandar um alerta quando os dados forem salvos
+    window.location = "profiledono.html";                                               // Levar o usuário para sua página de perfil com as modificações feitas
+  }
 };
 
 document.getElementById("salvaalt").addEventListener("click", salvarData); // Associar salvamento ao botão
