@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha aplicaÃ§Ã£o</title>
+    <title>Minha aplicação</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="scripts/login.js"></script>
     <script>
-        // Verifica se o usuÃ¡rio jÃ¡ esta logado e se negativo, redireciona para tela de login        
+        // Verifica se o usuário já esta logado e se negativo, redireciona para tela de login        
         if (!usuarioCorrente.login) {
             window.location = "login.html";
         }
@@ -30,17 +30,17 @@
 
         function initPage() {
 
-            // Associa a funÃ§Ã£o de logout ao botÃ£o
+            // Associa a função de logout ao botão
             document.getElementById('btn_logout').addEventListener('click', logoutUser);
 
-            // Informa o nome do usuÃ¡rio logado
+            // Informa o nome do usuário logado
             document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
 
-            // Lista os usuÃ¡rios 
+            // Lista os usuários 
             exibeUsuarios();
         }
 
-        // Associa ao evento de carga da pÃ¡gina a funÃ§Ã£o para verificar se o usuÃ¡rio estÃ¡ logado
+        // Associa ao evento de carga da página a função para verificar se o usuário está logado
         window.addEventListener('load', initPage);
     </script>
 
@@ -67,10 +67,10 @@
                             <a class="nav-link" href="indexlogado.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="sobrelogado.html">Sobre</a>
+                            <a class="nav-link" href="">Sobre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">CalendÃ¡rio</a>
+                            <a class="nav-link" href="#">Calendário</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="profiledono.html">Perfil</a>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D' Rolé</title>
+    <title>D' RolÃ©</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -27,8 +27,12 @@
                 <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
+                            <a class="nav-link" href="sobredeslogado.html">Sobre</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="login.html">Entrar</a>
                         </li>
+
                     </ul>
                 </div>
 
@@ -44,7 +48,7 @@
                     <form id="login-form" class="form" method="post" onsubmit="loginUser (this)">
                         <h3 class="text-center text-info">LOGIN</h3>
                         <div class="form-group">
-                            <label for="username" class="text-info">Usuário</label><br>
+                            <label for="username" class="text-info">UsuÃ¡rio</label><br>
                             <input type="text" name="username" id="username" class="form-control">
                         </div>
                         <div class="form-group">
@@ -76,9 +80,9 @@
                 <div class="modal-body">
                     <div id="login-box" class="col-md-12">
                         <form id="login-form" class="form" method="post" onsubmit="loginUser (this)">
-                            <h3 class="text-center text-info">Novo usuário</h3>
+                            <h3 class="text-center text-info">Novo usuÃ¡rio</h3>
                             <div class="form-group">
-                                <label for="login" class="text-info">Usuário</label><br>
+                                <label for="login" class="text-info">UsuÃ¡rio</label><br>
                                 <input type="text" name="txt_login" id="txt_login" class="form-control">
                             </div>
                             <div class="form-group">
@@ -94,7 +98,7 @@
                                 <input type="password" name="txt_senha" id="txt_senha" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="senha2" class="text-info">Confirmação de senha</label><br>
+                                <label for="senha2" class="text-info">ConfirmaÃ§Ã£o de senha</label><br>
                                 <input type="password" name="txt_senha2" id="txt_senha2" class="form-control">
                             </div>
                         </form>
@@ -111,51 +115,51 @@
     <script src="scripts/login.js"></script>
     <script>
 
-        // Declara uma função para processar o formulário de login
+        // Declara uma funÃ§Ã£o para processar o formulÃ¡rio de login
         function processaFormLogin(event) {
-            // Cancela a submissão do formulário para tratar sem fazer refresh da tela
+            // Cancela a submissÃ£o do formulÃ¡rio para tratar sem fazer refresh da tela
             event.preventDefault();
 
-            // Obtem os dados de login e senha a partir do formulário de login
+            // Obtem os dados de login e senha a partir do formulÃ¡rio de login
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
 
-            // Valida login e se estiver ok, redireciona para tela inicial da aplicação
+            // Valida login e se estiver ok, redireciona para tela inicial da aplicaÃ§Ã£o
             resultadoLogin = loginUser(username, password);
             if (resultadoLogin) {
-                alert('Usuário logado com sucesso.')
+                alert('UsuÃ¡rio logado com sucesso.')
                 window.location = "indexlogado.html";
             }
-            else { // Se login falhou, avisa ao usuário
-                alert('Usuário ou senha incorretos.');
+            else { // Se login falhou, avisa ao usuÃ¡rio
+                alert('UsuÃ¡rio ou senha incorretos.');
             }
         }
 
         function salvaLogin(event) {
-            // Cancela a submissão do formulário para tratar sem fazer refresh da tela
+            // Cancela a submissÃ£o do formulÃ¡rio para tratar sem fazer refresh da tela
             event.preventDefault();
 
-            // Obtem os dados do formulário
+            // Obtem os dados do formulÃ¡rio
             let login = document.getElementById('txt_login').value;
             let nome = document.getElementById('txt_nome').value;
             let email = document.getElementById('txt_email').value;
             let senha = document.getElementById('txt_senha').value;
             let senha2 = document.getElementById('txt_senha2').value;
             if (senha != senha2) {
-                alert('As senhas informadas não conferem.');
+                alert('As senhas informadas nÃ£o conferem.');
                 return
             }
 
-            // Adiciona o usuário no banco de dados
+            // Adiciona o usuÃ¡rio no banco de dados
             addUser(nome, login, senha, email);
-            alert('Usuário salvo com sucesso. Proceda com o login.');
+            alert('UsuÃ¡rio salvo com sucesso. Proceda com o login.');
 
             // Oculta a div modal do login
             //document.getElementById ('loginModal').style.display = 'none';
             $('#loginModal').modal('hide');
         }
 
-        // Associa a funçao processaFormLogin  formulário adicionado um manipulador do evento submit
+        // Associa a funÃ§ao processaFormLogin  formulÃ¡rio adicionado um manipulador do evento submit
         document.getElementById('login-form').addEventListener('submit', processaFormLogin);
         // Associar salvamento ao botao
         document.getElementById('btn_salvar').addEventListener('click', salvaLogin);
