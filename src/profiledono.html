@@ -7,6 +7,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
    <link rel="stylesheet" href="styles/profile.css">
+   <link rel="stylesheet" href="styles/cabecalho.css">
    <link rel="sortcut icon" href="">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -36,7 +37,7 @@
 
             <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarSupportedContent">
                <ul class="navbar-nav">
-                  <li class="nav-item active">
+                  <li class="nav-item">
                      <a class="nav-link" href="indexlogado.html">Home</a>
                   </li>
                   <li class="nav-item">
@@ -46,7 +47,7 @@
                      <a class="nav-link" href="#">Calendário</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="profiledono.html">Perfil</a>
+                     <a class="nav-link active" href="profiledono.html">Perfil</a>
                   </li>
 
                </ul>
@@ -66,8 +67,8 @@
                <div class="px-4 pt-0 pb-4 cover">
                   <div class="media align-items-end profile-head">
                      <div class="profile mr-3">
-                        <img id="imgPreview" src="https://picsum.photos/id/1005/80/80" alt="..."
-                           width="130" class="rounded mb-2 img-thumbnail">
+                        <img id="imgPreview" src="https://picsum.photos/id/1005/80/80" alt="..." width="130"
+                           class="rounded mb-2 img-thumbnail">
                         <a href="editarperfil.html" class="btn btn-outline-dark btn-sm btn-block editaPerfil"
                            data-toggle="modal" data-target="#mudarModal">Editar Perfil</a>
                      </div>
@@ -104,22 +105,19 @@
                <div class="py-4 px-4">
                   <div class="d-flex align-items-center justify-content-between mb-3">
                      <h5 class="mb-0">Fotos</h5>
-                     <a id="carregarMais"" class="btn btn-link text-muted" onclick="alertaCarregarFoto()">Carregar mais</a>
+                     <a id="carregarMais"" class=" btn btn-link text-muted" onclick="alertaCarregarFoto()">Carregar
+                        mais</a>
                      <!-- Carregar mais fotos -->
                   </div>
                   <div id="temAsFotos" class="row">
-                     <div class="col-lg-6 mb-2 pr-lg-1"><img
-                           src="https://picsum.photos/700/300?random"
-                           alt="" class="img-fluid rounded shadow-sm"></div>
-                     <div class="col-lg-6 mb-2 pl-lg-1"><img
-                           src="https://picsum.photos/700/300?random"
-                           alt="" class="img-fluid rounded shadow-sm"></div>
-                     <div class="col-lg-6 pr-lg-1 mb-2"><img
-                           src="https://picsum.photos/700/300?random"
-                           alt="" class="img-fluid rounded shadow-sm"></div>
-                     <div class="col-lg-6 pl-lg-1"><img
-                           src="https://picsum.photos/700/300?random"
-                           alt="" class="img-fluid rounded shadow-sm"></div>
+                     <div class="col-lg-6 mb-2 pr-lg-1"><img src="https://picsum.photos/700/300?random" alt=""
+                           class="img-fluid rounded shadow-sm"></div>
+                     <div class="col-lg-6 mb-2 pl-lg-1"><img src="https://picsum.photos/700/300?random" alt=""
+                           class="img-fluid rounded shadow-sm"></div>
+                     <div class="col-lg-6 pr-lg-1 mb-2"><img src="https://picsum.photos/700/300?random" alt=""
+                           class="img-fluid rounded shadow-sm"></div>
+                     <div class="col-lg-6 pl-lg-1"><img src="https://picsum.photos/700/300?random" alt=""
+                           class="img-fluid rounded shadow-sm"></div>
                   </div>
                   <div class="d-flex align-items-center justify-content-between mb-3">
                      <a id="adicionarFotos" class="btn btn-outline-dark btn-sm btn-block"
@@ -226,6 +224,19 @@
       </div>
    </div>
    <!-- End modal -->
+
+   <footer class="text-center text-white" style="background-color: rgb(161, 161, 161);">
+      <!-- Grid container -->
+      <div class="container p-4"></div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+         © 2020 Copyright:
+         <a class="text-white" href="indexlogado.html">D'Rolé</a>
+      </div>
+      <!-- Copyright -->
+   </footer>
 
    <!-- Script modal -->
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
