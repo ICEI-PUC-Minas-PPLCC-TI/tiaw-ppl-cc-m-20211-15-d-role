@@ -3,9 +3,9 @@
 }
 
 .cards {
-  width: 10%;
+  width: 270px;
   background-color: rgb(167, 106, 87);
-  border-radius: 60px;
+  border-radius: 40px;
   display: inline-block;
   padding: 15px;
   margin: 15px;
@@ -15,7 +15,6 @@
   width: 150px;
   height: 150px;
   border-radius: 75px;
-  margin-right: 15px;
   justify-content: center;
 }
 
@@ -35,11 +34,14 @@
 .nome {
   font-size: 30px;
   display: block;
+  line-height: 25px;
+  margin: 10px 0px;
 }
 
 .descricao {
   font-size: 20px;
   font-weight: lighter;
+  display: block;
 }
 
 .textoSobre {
@@ -54,5 +56,81 @@
   display: inline-block;
   padding: 15px 30px;
   margin-bottom: 300px;
-  width: 60%;
+  width: 70%;
+}
+
+#tags button{
+  background-color: rgba(97,124,148, 0.76);
+  border-radius: 20px;
+  border: none;
+  margin-top: 10px;
+}
+
+#tags a{
+  text-decoration: none;
+  color: rgb(55, 54, 67);
+}
+
+#tags{
+  text-align: right;
+  margin-right: 15px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1900px) {
+  div#card4e5inicial.cards {
+    display: none;
+  }
+}
+@media screen and (max-width: 990px) {
+  div.cards {
+    width: 60%;
+    text-align: left;
+  }
+  div.cards img{
+    float: left;
+    margin-right: 15px ;
+  }
+  div.sobre{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 660px) {
+  div.cards {
+    width: 80%;
+    text-align: left;
+  }
+  div.cards img{
+    float: left;
+    margin-right: 15px;
+    height: 100px;
+    width: 100px;
+  }
+  div.sobre{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 510px) {
+  div.cards {
+    text-align: center;
+    width: 97%;
+
+  }
+  div.cards img{
+    float: none;
+    margin-right: 15px ;
+  }
+  div.sobre{
+    width: 90%;
+  }
+  div #tags{
+    text-align: center;
+    margin: 0px;
+  }
+}
+@media screen and (min-width: 1900px) {
+  #card4e5 {
+    display: none;
+  }
 }
