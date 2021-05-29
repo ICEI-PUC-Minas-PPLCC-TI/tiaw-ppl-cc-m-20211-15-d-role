@@ -1,0 +1,58 @@
+#tudoSobre {
+  color: rgb(212, 211, 198);
+}
+
+.cards {
+  width: 10%;
+  background-color: rgb(167, 106, 87);
+  border-radius: 60px;
+  display: inline-block;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+}
+.cards img {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  margin-right: 15px;
+  justify-content: center;
+}
+
+.tituloCriadores {
+  text-align: center;
+  font-size: 70px;
+  color: rgb(100, 140, 141);
+  margin-bottom: 10px;
+}
+.tituloSobre {
+  text-align: center;
+  font-size: 70px;
+  color: rgb(100, 140, 141);
+  margin-top: 50px;
+}
+
+.nome {
+  font-size: 30px;
+  display: block;
+}
+
+.descricao {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.textoSobre {
+  font-size: 30px;
+  text-align: center;
+  color: rgb(66, 66, 64);
+  justify-content: center;
+}
+
+.sobre {
+  border-radius: 100px;
+  display: inline-block;
+  padding: 15px 30px;
+  margin-bottom: 300px;
+  width: 60%;
+}

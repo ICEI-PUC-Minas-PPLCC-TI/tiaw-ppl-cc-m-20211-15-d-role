@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D'Rolé - Sobre</title>
     <link rel="stylesheet" href="styles/cabecalho.css">
+    <link rel="stylesheet" href="styles/sobre.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="scripts/login.js"></script>
     <script>
         // Verifica se o usuário já esta logado e se negativo, redireciona para tela de login        
-        if(!usuarioCorrente.login) {
+        if (!usuarioCorrente.login) {
             window.location = "login.html";
         }
     </script>
@@ -54,6 +55,62 @@
         </nav>
     </header>
     <!-- Fim Header -->
+
+    <!-- Início Conteúdo -->
+    <div id="tudoSobre" class="container-fluid">
+        <!-- Início Criadores -->
+        <div class="row justify-content-center">
+            <span class="tituloCriadores">Criadores</span>
+        </div>
+        <div class="row justify-content-center">
+            <div class="cards">
+                <img src="/src/Imagens/bruno.jpg" alt="Bruno Faria">
+                <span class="nome">Bruno Faria</span>
+                <span class="descricao">Programador Aluno de Ciência da Computação - PUC Minas</span>
+            </div>
+            <div class="cards">
+                <img src="/src/Imagens/lanza.jpg" alt="Guilherme Lanza">
+                <span class="nome">Guilherme Lanza</span>
+                <span class="descricao">Programador Aluno de Ciência da Computação - PUC Minas</span>
+            </div>
+            <div class="cards">
+                <img src="/src/Imagens/laura.jpg" alt="Laura Iara">
+                <span class="nome">Laura Iara</span>
+                <span class="descricao">Programadora Aluna de Ciência da Computação - PUC Minas</span>
+            </div>
+            <div class="cards">
+                <img src="/src/Imagens/lucas.jpg" alt="Lucas Angelo">
+                <span class="nome">Lucas Angelo</span>
+                <span class="descricao">Programador Aluno de Ciência da Computação - PUC Minas</span>
+            </div>
+            <div class="cards">
+                <img src="/src/Imagens/tadeu.jpg" alt="Tadeu Ochoa">
+                <span class="nome">Tadeu Ochoa</span>
+                <span class="descricao">Programador Aluno de Ciência da Computação - PUC Minas</span>
+            </div>
+        </div>
+        
+        <!-- Fim Criadores -->
+
+        <!-- Início Sobre -->
+        <div class="row justify-content-center">
+            <span class="tituloSobre">Sobre</span>
+        </div>
+        <div class="row justify-content-center">
+            <div class="sobre">
+                <p class="textoSobre">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nisi soluta
+                    voluptatibus doloremque unde aliquam ratione? Vero rem iusto recusandae iure dignissimos! Soluta
+                    deserunt, facilis illo autem dolorum nihil molestiae eveniet fugit porro dignissimos ut magni nulla
+                    corporis, laborum corrupti alias, iusto deleniti ex saepe necessitatibus earum. At, eaque
+                    vero!</p>
+            </div>
+        </div>
+        <!-- Fim Sobre -->
+
+    </div>
+
+
+
 
     <footer class="text-center text-white" style="background-color: rgb(161, 161, 161);">
         <!-- Grid container -->
