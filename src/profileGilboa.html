@@ -14,7 +14,7 @@
    <!-- Bootstrap -->
    <title>D'Rolé - Perfil</title>
    <script src="scripts/login.js"></script>
-   <script src="scripts/comentarios.js"></script>
+
 
    <script>
       if (!usuarioCorrente.login) {
@@ -61,7 +61,7 @@
    <!-- Fim Header -->
 
    <!-- Inicio Perfil -->
-   <div id= "mudaCor" class="containerPerfil">
+   <div id="mudaCor" class="containerPerfil">
       <div class="row py-5 px-4">
          <div class="col-md-5 mx-auto">
             <div class="bg-white shadow rounded overflow-hidden">
@@ -159,10 +159,10 @@
                      <form action="#" style="clear: both;">
                         <label for="cor">Fundo do perfil.</label>
                         <input type="color" id="cor" onchange="trocaCor();">
-                    </form>
+                     </form>
                   </div>
                </div>
-                     <!-- End cor -->
+               <!-- End cor -->
                <div class="py-4 px-4">
                   <hr>
                </div>
@@ -173,10 +173,36 @@
                   </div>
 
                   <div class="p-4 rounded shadow-sm bg-light">
-                     <form id="comentar" action="comentarios.js" method="post">
-                        <input type="text" class="form-control" id="inputComentario" name="inputComentario" placeholder="Comentário" maxlength="240" autocomplete="off">
+                     <form id="comentar" method="post">
+                        <input type="text" class="form-control" id="inputComentario" name="inputComentario"
+                           placeholder="Comentário" maxlength="240" autocomplete="off">
                         <button id="btn_submit" type="submit">Enviar</button>
                      </form>
+                     <div id="addComment" class="px-4 py-3">
+                        <script>
+                           console.log("cheguei");
+                           var countId = 0;
+
+                           if (localStorage.getItem("countId") != null) {
+                              countId = localStorage.getItem("countId");
+                           }
+                           for (let index = 0; index < countId; index++) {
+                              console.log(index);
+                              imprimeComentario(index);
+                           }
+
+
+                           function imprimeComentario(ultimoComentario) {
+
+                              var dicionario = JSON.parse(localStorage.getItem("comentario" + ultimoComentario));
+                              $("#addComment").append(`
+                                 <div class="p-4 rounded">
+                                 <p>${dicionario.usuario}</p>
+                                 <p>${dicionario.comentario}</p>
+                              </div>`);
+                           };
+                        </script>
+                     </div>
                   </div>
                </div> <!-- End comentÃ¡rios -->
 
@@ -198,6 +224,8 @@
       </div>
       <!-- Copyright -->
    </footer>
+
+   <script src="scripts/comentarios.js"></script>
 
    <!-- Optional JavaScript -->
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
