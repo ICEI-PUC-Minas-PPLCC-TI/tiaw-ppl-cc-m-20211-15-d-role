@@ -80,7 +80,7 @@ function loginUser (login, senha) {
             usuarioCorrente.id = usuario.id;
             usuarioCorrente.login = usuario.login;
             usuarioCorrente.email = usuario.email;
-            usuarioCorrente.nome = usuario.nome;
+            usuarioCorrente.nome = usuario.nome; // NOME DE USER ARMAZENADO EM usuarioCorrente.nome
             
             // Salva os dados do usuário corrente no Session Storage, mas antes converte para string
             sessionStorage.setItem ('usuarioCorrente', JSON.stringify (usuarioCorrente));
