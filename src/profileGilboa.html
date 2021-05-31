@@ -14,6 +14,8 @@
    <!-- Bootstrap -->
    <title>D'Rolé - Perfil</title>
    <script src="scripts/login.js"></script>
+   <script src="scripts/comentarios.js"></script>
+
    <script>
       if (!usuarioCorrente.login) {
          window.location = "login.html";
@@ -161,7 +163,10 @@
                   </div>
 
                   <div class="p-4 rounded shadow-sm bg-light">
-                     Editavél para comentários (Laura)
+                     <form id="comentar" action="comentarios.js" method="post">
+                        <input type="text" class="form-control" id="inputComentario" name="inputComentario" placeholder="Comentário" maxlength="240" autocomplete="off">
+                        <button id="btn_submit" type="submit">Enviar</button>
+                     </form>
                   </div>
                </div> <!-- End comentÃ¡rios -->
 
