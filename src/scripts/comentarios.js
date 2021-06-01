@@ -1,4 +1,5 @@
 onload = () => {
+  // Início seção validar comentário (para bloquer botão enviar caso não tenha nada digitado no input dos comentários)
   btn_submit.disabled = true;
   let validaComentario = () => {
     if (inputComentario.value.length != 0) {
@@ -8,27 +9,29 @@ onload = () => {
     }
   };
   inputComentario.oninput = validaComentario;
+  // Fim seção validar comentário
 
+  // Início seção para carregar os comentários já existentes no carregamento da página
   var countId = 0;
 
   if (localStorage.getItem("countId") != null) {
-     countId = localStorage.getItem("countId");
+    // se o contador de comentários já existir no localStorage, o contId assume esse valor para participar do for
+    countId = localStorage.getItem("countId");
   }
   for (let index = 0; index < countId; index++) {
-     console.log(index);
-     imprimeComentario(index);
+    imprimeComentario(index);
   }
-
-  function imprimeComentario(ultimoComentario) {
-
-     var dicionario = JSON.parse(localStorage.getItem("comentario" + ultimoComentario));
-     $("#addComment").append(`
-        <div class="p-4 rounded">
-        <p>${dicionario.usuario}</p>
-        <p>${dicionario.comentario}</p>
-     </div>`);
-  };
 };
+function imprimeComentario(ultimoComentario) {
+  var dicionario = JSON.parse(
+    localStorage.getItem("comentario" + ultimoComentario)
+  );
+  $("#addComment").append(`
+        <div class="p-4 rounded shadow-sm bg-light">
+        <p><strong>${dicionario.usuario}:</strong></p>
+        <p>${dicionario.comentario}</p>
+     </div>`); // imprime no html o último comentário no localStorage (comentario + index -> ex.: comentario4)
+}
 
 var salvaComentario = function (comentario) {
   comentario.preventDefault();
@@ -36,30 +39,30 @@ var salvaComentario = function (comentario) {
   var countId = 0;
 
   if (localStorage.getItem("countId") != null) {
+    // se o contador de comentários já existir no localStorage, o contId assume esse valor
     countId = localStorage.getItem("countId");
   } else {
-    countId = 0;
+    countId = 0; // se não, é a posição inicial
   }
 
   var Comentario = document.getElementById("inputComentario").value;
   var Usuario = sessionStorage.getItem("usuarioCorrente");
-  Usuario = JSON.parse(Usuario);
+  Usuario = JSON.parse(Usuario); // pega os dados do usuário
 
   var dicionario = {
-    "comentario": Comentario,
-    "usuario": Usuario.nome,
+    comentario: Comentario,
+    usuario: Usuario.nome, // pega apenas a propriedade nome do objeto usuário
   };
 
-  var JSONdicionario = JSON.stringify(dicionario);
+  var JSONdicionario = JSON.stringify(dicionario); // transforma em JSON para armazenar no localStorage como comentário + id (inicialmente comentario0)
   localStorage.setItem("comentario" + countId, JSONdicionario);
-  imprimeComentario(countId);
+  imprimeComentario(countId); // chama a função para adicionar o comentário imediatamente quando enviado
 
-  countId++;
+  countId++; // adiciona o contador
 
-  localStorage.setItem("countId", countId);
+  localStorage.setItem("countId", countId); // guarda esse contador para fixar a quantidade de comentários já existentes
 
   alert("Comentário enviado com sucesso!");
-
 };
 
 document

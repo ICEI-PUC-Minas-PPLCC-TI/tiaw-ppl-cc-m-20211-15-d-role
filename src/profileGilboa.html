@@ -176,35 +176,13 @@
                      <form id="comentar" method="post">
                         <input type="text" class="form-control" id="inputComentario" name="inputComentario"
                            placeholder="Comentário" maxlength="240" autocomplete="off">
-                        <button id="btn_submit" type="submit">Enviar</button>
+                        <button id="btn_submit" class="btn btn-outline-dark btn-sm btn-block" type="submit">Enviar</button>
                      </form>
-                     <div id="addComment" class="px-4 py-3">
-                        <script>
-                           console.log("cheguei");
-                           var countId = 0;
-
-                           if (localStorage.getItem("countId") != null) {
-                              countId = localStorage.getItem("countId");
-                           }
-                           for (let index = 0; index < countId; index++) {
-                              console.log(index);
-                              imprimeComentario(index);
-                           }
-
-
-                           function imprimeComentario(ultimoComentario) {
-
-                              var dicionario = JSON.parse(localStorage.getItem("comentario" + ultimoComentario));
-                              $("#addComment").append(`
-                                 <div class="p-4 rounded">
-                                 <p>${dicionario.usuario}</p>
-                                 <p>${dicionario.comentario}</p>
-                              </div>`);
-                           };
-                        </script>
+                     <div id="addComment" class="px-4 py-3 ">
+                        
                      </div>
                   </div>
-               </div> <!-- End comentÃ¡rios -->
+               </div> <!-- End comentários -->
 
             </div>
          </div>
