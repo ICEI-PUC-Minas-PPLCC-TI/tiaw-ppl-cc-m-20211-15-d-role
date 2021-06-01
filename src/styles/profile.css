@@ -1,4 +1,4 @@
-.containerPerfil {
+9.containerPerfil {
     margin:30px;
     margin-top: 0;
 }
@@ -15,4 +15,12 @@
 
 .corExemplo {
     float: left;
+}
+
+input#inputComentario{
+    margin-bottom: 10px;
+}
+
+#buttonEnviar{
+    width: 55px;
 }
