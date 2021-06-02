@@ -1,7 +1,6 @@
 function trocaCor(){
-  
-  
 }
+
 function alertaAdicionarFoto() {
   alert(
     "Funcionalidade indisponível no momento, nenhum arquivo ficará salvo no perfil. Apenas a foto de perfil."
@@ -54,7 +53,6 @@ var salvarData = function (event) {
     localStorage.setItem("sobrePerfil", Sobre);                                         // Guardar no localStorage o valor da variavel Sobre com a key sobrePerfil
     localStorage.setItem("localPerfil", Local);                                         // Guardar no localStorage o valor da variavel Local com a key localPerfil
     localStorage.setItem("corPerfil", Cor); 
-    
 
     alert("Dados salvos com sucesso.");                                                 // Mandar um alerta quando os dados forem salvos
     window.location = "profiledono.html";                                               // Levar o usuário para sua página de perfil com as modificações feitas

@@ -60,7 +60,7 @@
    <!-- Fim Header -->
 
    <!-- Inicio Perfil -->
-   <div class="containerPerfil">
+   <div id= "mudaCor" class="containerPerfil">
       <div class="row py-5 px-4">
          <div class="col-md-5 mx-auto">
             <div class="bg-white shadow rounded overflow-hidden">
@@ -210,6 +210,16 @@
                            placeholder="Escreva a sua localização." autocomplete="off">
                      </div>
                   </div>
+
+                  <div class="form-group row">
+                     <label for="corEditavel" class="col-sm-2 col-form-label">Cor</label>
+                     <div class="col-sm-10">
+                        <form action="#" style="clear: both;">
+                           <label for="cor">Fundo do perfil.</label>
+                           <input type="color" id="cor" onchange="trocaCor();">
+                       </form>
+                     </div>
+                  </div> <!-- End cor -->
 
                   <div class="form-group row">
                      <div class="col-sm-10">
