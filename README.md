@@ -1,5 +1,5 @@
 #LINK DE ACESSO
-> Link de acesso para o site no GitHub Pages: https://icei-puc-minas-pplcc-ti.github.io/tiaw-ppl-cc-m-20211-15-d-role/src/login.html
+> Link de acesso para o site no GitHub Pages: ([D'Rolé WebSite](https://icei-puc-minas-pplcc-ti.github.io/tiaw-ppl-cc-m-20211-15-d-role/src/login.html) 
 
 # Template de Projeto
 
@@ -20,7 +20,7 @@ Este _template_ adota a seguinte estrutura de diretórios:
   - `scripts`
   - `styles`
   - `vendor`
-- `Imagens`
+  - `Imagens`
 
 > O grupo é livre para alterar a estrutura proposta. No entanto, nesse
 > caso, o arquivo `README.md` deve ser devidamente modificado para
@@ -51,12 +51,10 @@ JavaScript:
 
 - O diretório `scripts` armazena os arquivos JavaScripts do projeto
 - O diretório `styles` é utilizado para os arquivos CSS
-- o diretório `vendor` é reservado para incluir bibliotecas e frameworks
+- O diretório `vendor` é reservado para incluir bibliotecas e frameworks
   utilizados no projeto como Bootstrap, jQuery, etc.
-  
-## Imagens
-
-Este diretório é utilizado para armazenar imagens, fontes e outros recursos utilizados no projeto. 
+- O diretório `Imagens` é utilizado para arquivar todas as fotos utilizadas
+  no projeto.
 
 # Orientações Gerais Sobre o Projeto
 
