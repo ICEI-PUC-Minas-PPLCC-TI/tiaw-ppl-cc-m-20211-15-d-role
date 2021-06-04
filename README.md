@@ -1,5 +1,5 @@
 #LINK DE ACESSO
-> Link de acesso para o site no GitHub Pages: ([D'Rolé WebSite](https://icei-puc-minas-pplcc-ti.github.io/tiaw-ppl-cc-m-20211-15-d-role/src/login.html) 
+> Link de acesso para o site no GitHub Pages: [D'Rolé WebSite](https://icei-puc-minas-pplcc-ti.github.io/tiaw-ppl-cc-m-20211-15-d-role/src/login.html) 
 
 # Template de Projeto
 
@@ -57,7 +57,6 @@ JavaScript:
   no projeto.
 
 # Orientações Gerais Sobre o Projeto
-
 
 - Aprenda Markdown e Use-o para Documentar o Projeto  ([link
   1](https://guides.github.com/features/mastering-markdown/) | [link
