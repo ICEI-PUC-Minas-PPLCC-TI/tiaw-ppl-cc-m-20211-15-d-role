@@ -22,11 +22,6 @@ Este _template_ adota a seguinte estrutura de diretórios:
   - `vendor`
   - `Imagens`
 
-> O grupo é livre para alterar a estrutura proposta. No entanto, nesse
-> caso, o arquivo `README.md` deve ser devidamente modificado para
-> detalhar a nova estrutura e onde cada um dos artefatos produzidos
-> estão localizados.
-
 ## docs
 
 Esta pasta arquiva a documentação dos projetos, sendo que o arquivo
