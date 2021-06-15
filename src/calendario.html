@@ -18,6 +18,8 @@
         }
     </script>
 
+    <script src="https://kit.fontawesome.com/a55657dc48.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body onload="init()">
@@ -187,21 +189,24 @@
                     "estabelecimento": "Gilboa",
                     "musico": "MC Davi",
                     "tipomusica": "Funk",
-                    "entrada": "+18"
+                    "entrada": "+18",
+                    "ativo": true
                 },
                 {
                     "dia": "2021-06-31",
                     "estabelecimento": "Gilboa",
                     "musico": "Matuê",
                     "tipomusica": "Trap",
-                    "entrada": "+18"
+                    "entrada": "+18",
+                    "ativo": true
                 },
                 {
                     "dia": "2021-06-31",
                     "estabelecimento": "Gilboa",
                     "musico": "Justin Bieber",
                     "tipomusica": "Pop",
-                    "entrada": "+18"
+                    "entrada": "+18",
+                    "ativo": true
                 }
             ]
         }
@@ -218,7 +223,8 @@
                 "estabelecimento": evento.estabelecimento,
                 "musico": evento.musico,
                 "tipomusica": evento.tipomusica,
-                "entrada": evento.entrada
+                "entrada": evento.entrada,
+                "ativo": true
             };
 
             // Insere o novo objeto no array
@@ -236,12 +242,15 @@
             // Popula a tabela com os registros do banco de dados
             for (i = 0; i < db.data.length; i++) {
                 let evento = db.data[i];
-                $("#table-eventos").append(`<tr><td scope="row">${evento.dia}</td>
+                if (evento.ativo === true) {
+                    $("#table-eventos").append(`<tr><td scope="row">${evento.dia}</td>
                                                 <td>${evento.estabelecimento}</td>
                                                 <td>${evento.musico}</td>
                                                 <td>${evento.tipomusica}</td>
                                                 <td>${evento.entrada}</td>
+                                                <td><button id="deleteEvento" type="button" class="btn btn-danger" onclick="deleteEvento(${i})"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
                                             </tr>`);
+                }
             }
         }
 
@@ -255,6 +264,7 @@
                 let campoTipoMusical = $("#tipoMusical").val();
                 let campoEntrada = $('#entrada').val();
                 let evento = {
+                    id: db.data.length,
                     dia: campoDia,
                     estabelecimento: campoEstabelecimento,
                     musico: campoMusico,
@@ -272,7 +282,24 @@
 
                 insertEvento(evento);
                 exibeEventos();
+
             });
+            exibeEventos();
+        }
+
+        function deleteEvento(i) {
+            db.data[i].ativo = false;
+            let novoEvento = {
+                "dia": db.data[i].dia,
+                "estabelecimento": db.data[i].estabelecimento,
+                "musico": db.data[i].musico,
+                "tipomusica": db.data[i].tipomusica,
+                "entrada": db.data[i].entrada,
+                "ativo": db.data[i].ativo
+            };
+
+            // Atualiza os dados no Local Storage
+            localStorage.setItem('db_eventos', JSON.stringify(db));
             exibeEventos();
         }
     </script>
