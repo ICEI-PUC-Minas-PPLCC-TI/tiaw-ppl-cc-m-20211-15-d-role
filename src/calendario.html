@@ -264,7 +264,6 @@
                 let campoTipoMusical = $("#tipoMusical").val();
                 let campoEntrada = $('#entrada').val();
                 let evento = {
-                    id: db.data.length,
                     dia: campoDia,
                     estabelecimento: campoEstabelecimento,
                     musico: campoMusico,
@@ -289,14 +288,6 @@
 
         function deleteEvento(i) {
             db.data[i].ativo = false;
-            let novoEvento = {
-                "dia": db.data[i].dia,
-                "estabelecimento": db.data[i].estabelecimento,
-                "musico": db.data[i].musico,
-                "tipomusica": db.data[i].tipomusica,
-                "entrada": db.data[i].entrada,
-                "ativo": db.data[i].ativo
-            };
 
             // Atualiza os dados no Local Storage
             localStorage.setItem('db_eventos', JSON.stringify(db));
