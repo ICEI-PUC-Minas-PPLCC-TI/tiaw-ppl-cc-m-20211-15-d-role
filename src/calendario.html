@@ -73,9 +73,21 @@
 
 
         <div class="form-group row">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <input type="button" class="btn btn-success" id="btnInsert" value="Adicionar evento" data-toggle="modal"
                     data-target="#calendarioModal">
+            </div>
+            <div class="col-sm-6">
+                <select id="ddlViewBy" onchange="exibeEventos()">
+                    <option value="Todos" selected="selected">Todos</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Funk">Funk</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Axe">Axe</option>
+                    <option value="Sertanejo">Sertanejo</option>
+                    <option value="Eletrônica">Eletrônica</option>
+                    <option value="Trap">Trap</option>
+                </select>
             </div>
         </div>
 
@@ -242,7 +254,9 @@
             // Popula a tabela com os registros do banco de dados
             for (i = 0; i < db.data.length; i++) {
                 let evento = db.data[i];
-                if (evento.ativo === true) {
+                var foo = document.getElementById("ddlViewBy");
+                var bar = foo.value;
+                if (evento.ativo === true && (bar == "Todos" || bar == evento.tipomusica)) {
                     $("#table-eventos").append(`<tr><td scope="row">${evento.dia}</td>
                                                 <td>${evento.estabelecimento}</td>
                                                 <td>${evento.musico}</td>
